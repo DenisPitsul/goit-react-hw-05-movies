@@ -1,0 +1,14 @@
+.homeTitle {
+    margin-top: 20px;
+    font-size: 32px;
+}
+.homeList {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.homelink {
+    color: black;
+    font-size: 18px;
+}

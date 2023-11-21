@@ -1,0 +1,19 @@
+.header {
+    box-shadow: 0 -6px 10px 5px rgba(0,0,0,0.5);
+}
+.headerList {
+    display: flex;
+    gap: 20px;
+}
+.headerLink {
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: black;
+}
+.headerLinkActive {
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: tomato;
+}

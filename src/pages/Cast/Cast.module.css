@@ -1,0 +1,24 @@
+.castList {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.actorItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: calc((100% - 50px) / 6);
+}
+.actorImg {
+    height: 200px;
+}
+.actorName {
+    font-size: 20px;
+    margin-top: 10px;
+}
+.actorCharacter {
+    font-size: 18px;
+    margin-top: 10px;
+}

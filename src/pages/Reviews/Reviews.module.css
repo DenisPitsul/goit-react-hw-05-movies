@@ -1,0 +1,17 @@
+.reviewsList {
+    margin-top: 20px;
+}
+.reviewItem {
+    margin-top: 20px;
+}
+.reviewAuthorName {
+    font-size: 24px;
+}
+.reviewText {
+    margin-top: 10px;
+    font-size: 18px;
+}
+.noInfoText {
+    margin-top: 20px;
+    font-size: 18px;
+}

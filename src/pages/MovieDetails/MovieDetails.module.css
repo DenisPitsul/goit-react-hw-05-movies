@@ -1,0 +1,46 @@
+.goBackLink {
+    display: inline-block;
+    margin-top: 20px;
+    background-color:chocolate;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;
+}
+.moviesDetailsContainer {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+}
+.movieImg {
+    width: 200px;
+}
+.movieDetailsContent {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.movieTitle {
+    font-size: 32px;
+}
+.movieSecondTitle {
+    margin-top: 15px;
+    font-size: 24px;
+}
+.movieInfo {
+    font-size: 18px;
+}
+.additionalInfoContainer {
+    margin-top: 20px;
+}
+.additionalInfoList {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+.additionalInfoLink {
+    display: inline-block;
+    background-color: darkgreen;
+    padding: 5px 10px;
+    color: white;
+    border-radius: 5px;   
+}
