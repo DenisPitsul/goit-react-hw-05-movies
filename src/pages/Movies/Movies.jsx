@@ -19,6 +19,7 @@ const Movies = () => {
     useEffect(() => {
         if(searchParams.get('query'))
             fetchSearchedMovies(searchParams.get('query'))
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [searchParams])
 
     const onSearchSubmit = (searchText) => {

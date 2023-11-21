@@ -18,6 +18,7 @@ const MovieDetails = () => {
 
     useEffect(() => {
         fetchMovieDetails()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     return (
