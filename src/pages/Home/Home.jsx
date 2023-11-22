@@ -1,9 +1,8 @@
-import Header from 'components/Header/Header'
 import classes from './Home.module.css'
 import { useEffect, useState } from 'react'
 import { useFetching } from 'hooks/useFetching'
 import { MoviesService } from 'api/MoviesService'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import LoaderComp from 'components/LoaderComp/LoaderComp'
 import ErrorComp from 'components/ErrorComp/ErrorComp'
 
@@ -20,34 +19,31 @@ const Home = () => {
     }, [])
 
     return (
-        <div>
-            <Header active='home'/>
-            <div className='container'>
-                <h2 className={classes.homeTitle}>Trending today</h2>
-                {
-                    isLoading
+        <div className='container'>
+            <h2 className={classes.homeTitle}>Trending today</h2>
+            {
+                isLoading
+                ?
+                <LoaderComp/>
+                :
+                error
                     ?
-                    <LoaderComp/>
+                    <ErrorComp message={error}/>
                     :
-                    error
-                        ?
-                        <ErrorComp message={error}/>
-                        :
-                        <ul className={classes.homeList}>
-                        {
-                            trendingMovies.map(({id, original_title}) => 
-                                <li key={id} className={classes.homeItem}>
-                                    <NavLink 
-                                        className={classes.homelink} 
-                                        to={'/movies/' + id}
-                                        state={{from: '/'}}
-                                    >{original_title}</NavLink>
-                                </li>    
-                            )
-                        }
-                </ul>
-                }
-            </div>
+                    <ul className={classes.homeList}>
+                    {
+                        trendingMovies.map(({id, original_title}) => 
+                            <li key={id} className={classes.homeItem}>
+                                <Link 
+                                    className={classes.homelink} 
+                                    to={'/movies/' + id}
+                                    state={{from: '/'}}
+                                >{original_title}</Link>
+                            </li>    
+                        )
+                    }
+            </ul>
+            }
         </div>
     )
 }
