@@ -1,5 +1,5 @@
 import classes from './MovieDetails.module.css'
-import { Suspense, useEffect, useState } from 'react'
+import { Suspense, useEffect, useRef, useState } from 'react'
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom'
 import { useFetching } from 'hooks/useFetching'
 import { MoviesService } from 'api/MoviesService'
@@ -10,6 +10,7 @@ const MovieDetails = () => {
     const [movieDetails, setMovieDetails] = useState({})
     const {movieId} = useParams()
     const location = useLocation()
+    const backLinkRef = useRef(location)
     const [fetchMovieDetails, isLoading, error] = useFetching(async () => {
         const data = await MoviesService.getMovieDetailsById(movieId)
         setMovieDetails(data)
@@ -23,7 +24,7 @@ const MovieDetails = () => {
     return (
         <div className='container'>
             <Link 
-                to={location.state?.from ?? '/'}
+                to={backLinkRef.current.state?.from ?? '/'}
                 className={classes.goBackLink}
             >Go back</Link>
             {
