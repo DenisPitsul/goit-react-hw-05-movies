@@ -23,7 +23,7 @@ const MovieDetails = () => {
     return (
         <div className='container'>
             <Link 
-                to={location.state.from}
+                to={location.state?.from ?? '/'}
                 className={classes.goBackLink}
             >Go back</Link>
             {
